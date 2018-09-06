@@ -1,0 +1,23 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    color: rgb(68, 73, 121);
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+footer {
+    color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
