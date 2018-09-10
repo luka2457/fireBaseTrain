@@ -12,12 +12,40 @@ body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
+.jumbotron {
+
+}
+
 footer {
     color: black;
-    position: fixed;
+    background-color: white;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: 60px;
     line-height: 60px;
     text-align: center;
+}
+
+.container {
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+#validationError {
+    color: rgb(228, 102, 102);
+    padding-top: 2%;
+}
+
+th, td {
+    text-align:center;
+}
+
+#current-trains {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f2f2f2;
 }
