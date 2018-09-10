@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Train Scheduler</title>
-    <!--CSS-->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
         crossorigin="anonymous">
@@ -15,28 +13,76 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!--My css styling-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <!--Jquery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- LINK TO FIREBASE GOES HERE -->
-    <script src=""></script>
 </head>
 
-<body background="assets/images/background.jpeg" class="img-responsive">
+<body background="assets/images/background.jpg" class="img-responsive">
     <div class="container">
-        <div class="w3-animate-zoom jumbotron">
+        <div class="w3-animate-zoom card">
             <h1 class="text-center">Train Scheduler</h1>
+        </div>
+        <!-- New Trains will Get Dumped Here -->
+        <div id="current-trains" class="card">
+            <table>
+                <thead>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency (min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </thead>
+                <tbody>
+                    <!-- New trains will go here -->
+                    <tr></tr>
+                </tbody>
+            </table>
 
 
-            <!-- New Trains will Get Dumped Here -->
-            <div id="trains-appear-here" class="row container"></div>
+
+
+        </div>
+
+        <div class="card">
+            <div class="card-heading">
+                <h3 class="card-title">Add Train</h3>
+            </div>
+            <div class="card-body">
+                <!-- Train form-->
+                <form role="form">
+                    <div class="form-group row">
+                        <label for="trainName-input">Train Name:</label>
+                        <input class="form-control" id="trainName-input" type="text" maxlength="20">
+                    </div>
+                    <div class="form-group row">
+                        <label for="destination-input">Destination:</label>
+                        <input class="form-control" id="destination-input" type="text" maxlength="20">
+                    </div>
+                    <div class="form-group row">
+                        <label for="trainTime-input">First Train Time (hh:mm -military time)</label>
+                        <input class="form-control" id="trainTime-input" type="text" maxlength="4" placeholder="00:00">
+                    </div>
+                    <div class="form-group row">
+                        <label for="frequency-input">Frequency (min):</label>
+                        <input class="form-control" id="frequency-input" type="number">
+                    </div>
+                    <button class="btn-primary" id="add-train" type="submit">Submit</button>
+                    <div id="validationError"></div>
+                </form>
+            </div>
         </div>
     </div>
     <!-- Link to Portfolio -->
     <footer class="sticky-bottom w3-animate-zoom">
         <a href="https://luka2457.github.io/Bootstrap-Portfolio/portfolio.html">Luke's Portfolio</a>
     </footer>
+    <!--Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Link to Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- LINK TO FIREBASE GOES HERE -->
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
     <!-- Javascript -->
     <script type="text/javascript" src="assets/javascript/javascript.js"> </script>
+
 </body>
 
 </html>
